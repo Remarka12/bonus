@@ -1,22 +1,17 @@
 public class Main {
     public static void main(String[] args) {
-        int balance = 200;  // начальная сумма на телефоне
-        boolean moreThousand = true;
-        int add = 700;   // сумма, которую пользователь добавил
-        int c = balance + add;
+        int balance = 100;  // начальная сумма на телефоне
+        int add = 100;   // сумма, которую пользователь добавил
+        int total = balance + add; // итоговая сумма на счету пользователя
 
+        int withBonus = balance + add / 100 + add; // сумма на счету при наличии бонусов
 
-        if (c > 1000) {
+        if (add > 1000) {
             System.out.println("Бонусы начислены");
         } else {
+            withBonus = total;
             System.out.println("Бонусы не начислены");
         }
-        int bonus = balance + add / 100 + add;
-        if (bonus < 1000) {
-            bonus = c;
-        }
-
-        System.out.println("Итоговая сумма: " + bonus);
-
+        System.out.println("Итоговая сумма: " + withBonus);
     }
 }
